@@ -224,7 +224,7 @@ async def main():
         # text=x.text
         task=asyncio.create_task(getFromDongFangCaiFu(tickername,tickerNumber,tickerLocation))
         taskList.append(task)
-    done, pending = await asyncio.wait(taskList, timeout=70)
+    done, pending = await asyncio.wait(taskList, timeout=None)
     print("并行时间： ")
     print(time.time() - startTimeForBingXing)
     Df=Df.append(df)
